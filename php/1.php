@@ -1,6 +1,11 @@
 <?php
 // Establecer la conexión a la base de datos
-include 'intento-1/1.php';
+$conexion = new mysqli("localhost", "usuario", "contraseña", "basededatos");
+
+// Verificar la conexión
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
 
 // Obtener datos del formulario
 $nombre = $_POST['NOMBRE'];
@@ -19,3 +24,4 @@ if ($conexion->query($sql) === TRUE) {
 // Cerrar la conexión
 $conexion->close();
 ?>
+

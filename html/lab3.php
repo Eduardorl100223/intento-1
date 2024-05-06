@@ -1,3 +1,15 @@
+<?php
+
+if($_POST['nombre']){
+    echo 'hay un nombre';
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +40,8 @@
     </style>
 </head>
 <body>
-    <form action="create.php" method="POST">
-        Nombre:  <input type="text" name="NOMBRE"> Funcion: <input type="text" name="FUNCION"><br>
+    <form action="" method="POST">
+        Nombre:  <input type="text" name="nombre"> Funcion: <input type="text" name="FUNCION"><br>
         <input type="submit" value="Agregar">
     </form>
     <form action="update.php" method="POST">
@@ -41,9 +53,6 @@
         Registro a Eliminar: <input type="number" name="id"><br>
         <input type="submit" value="Eliminar">
     </form>
-    <?php include 'intento-1/1.php'; ?>
-    <?php include 'intento-1/2.php'; ?>
-    <?php include 'intento-1/3.php'; ?>
-    <?php include 'intento-1/4.php'; ?>
+
 </body>
 </html>
